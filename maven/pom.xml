@@ -1,0 +1,72 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+ 
+    <groupId>pl.sylwek.kino</groupId>
+    <artifactId>kino-parent</artifactId>
+	<packaging>pom</packaging>
+    <version>1.0.0</version>
+    <name>kino-parent</name>
+  
+  <properties>
+    <kino.version>1.0.0</kino.version>
+  </properties>
+
+  <profiles>
+      <profile>
+              <id>all</id>
+        <activation>
+          <activeByDefault>true</activeByDefault>
+        </activation>
+              <modules>
+          <module>kino-entities</module>
+          <module>kino-dao</module>
+          <module>kino-services</module>
+          <module>kino-client</module>
+          <module>kino-worker</module>
+        </modules>
+          </profile>
+          <profile>
+              <id>client</id>
+              <modules>
+          <module>kino-entities</module>
+          <module>kino-dao</module>
+          <module>kino-services</module>
+          <module>kino-client</module>
+        </modules>
+          </profile>
+          <profile>
+              <id>worker</id>
+              <modules>
+          <module>kino-entities</module>
+          <module>kino-dao</module>
+          <module>kino-services</module>
+          <module>kino-worker</module>
+        </modules>
+          </profile>
+    </profiles>
+
+<repositories>
+        <repository>
+            <id>spring-maven-release</id>
+            <name>Spring Maven Release Repository</name>
+            <url>http://maven.springframework.org/release</url>
+        </repository>
+        <repository>
+            <id>spring-maven-milestone</id>
+            <name>Spring Maven Milestone Repository</name>
+            <url>http://maven.springframework.org/milestone</url>
+        </repository>
+        <repository>
+            <id>spring-roo-repository</id>
+            <name>Spring Roo Repository</name>
+            <url>http://spring-roo-repository.springsource.org/release</url>
+        </repository>
+		<repository>
+		    <id>Alfresco Maven Repository</id>
+		    <name>Alfresco Maven Repository</name>
+		    <url>https://maven.alfresco.com/nexus/content/groups/public/</url>
+		</repository>		
+    </repositories>
+
+</project>
