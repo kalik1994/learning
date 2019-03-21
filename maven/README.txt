@@ -1,0 +1,1 @@
+Zrobione przy użyciu poradnika http://yaqzi.pl/2016/12/kurs-mavena-cz-19-podsumowanie/
